@@ -21,7 +21,7 @@ adds support for features such as AuxPoW.
 
 To perform a full build use
 ```
-mvn clean package
+mvn clean package -Dmaven.test.skip
 ```
 You can also run
 ```
