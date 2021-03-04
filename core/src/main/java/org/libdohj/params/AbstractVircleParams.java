@@ -37,56 +37,56 @@ import org.libdohj.core.AltcoinSerializer;
 import org.libdohj.core.AuxPoWNetworkParameters;
 
 /**
- * Common parameters for Syscoin networks.
+ * Common parameters for Vircle networks.
  */
-public abstract class AbstractSyscoinParams extends NetworkParameters implements AuxPoWNetworkParameters {
-    /** Standard format for the SYSCOIN denomination. */
-    public static final MonetaryFormat SYSCOIN;
-    /** Standard format for the mSYSCOIN denomination. */
-    public static final MonetaryFormat MSYSCOIN;
+public abstract class AbstractVircleParams extends NetworkParameters implements AuxPoWNetworkParameters {
+    /** Standard format for the VIRCLE denomination. */
+    public static final MonetaryFormat VIRCLE;
+    /** Standard format for the mVIRCLE denomination. */
+    public static final MonetaryFormat MVIRCLE;
     /** Standard format for the Koinu denomination. */
     public static final MonetaryFormat KOINU;
 
     public static final int AUXPOW_CHAIN_ID = 0x1000;
 
 
-    /** Currency code for base 1 Syscoin. */
-    public static final String CODE_SYSCOIN = "SYSCOIN";
-    /** Currency code for base 1/1,000 Syscoin. */
-    public static final String CODE_MSYSCOIN = "mSYSCOIN";
-    /** Currency code for base 1/100,000,000 Syscoin. */
+    /** Currency code for base 1 Vircle. */
+    public static final String CODE_VIRCLE = "VIRCLE";
+    /** Currency code for base 1/1,000 Vircle. */
+    public static final String CODE_MVIRCLE = "mVIRCLE";
+    /** Currency code for base 1/100,000,000 Vircle. */
     public static final String CODE_KOINU = "Koinu";
 
 
     static {
-        SYSCOIN = MonetaryFormat.BTC.noCode()
-            .code(0, CODE_SYSCOIN)
-            .code(3, CODE_MSYSCOIN)
+        VIRCLE = MonetaryFormat.BTC.noCode()
+            .code(0, CODE_VIRCLE)
+            .code(3, CODE_MVIRCLE)
             .code(7, CODE_KOINU);
-        MSYSCOIN = SYSCOIN.shift(3).minDecimals(2).optionalDecimals(2);
-        KOINU = SYSCOIN.shift(7).minDecimals(0).optionalDecimals(2);
+        MVIRCLE = VIRCLE.shift(3).minDecimals(2).optionalDecimals(2);
+        KOINU = VIRCLE.shift(7).minDecimals(0).optionalDecimals(2);
     }
 
     /** The string returned by getId() for the main, production network where people trade things. */
-    public static final String ID_SYSCOIN_MAINNET = "org.syscoin.production";
+    public static final String ID_VIRCLE_MAINNET = "org.vircle.production";
     /** The string returned by getId() for the testnet. */
-    public static final String ID_SYSCOIN_TESTNET = "org.syscoin.test";
-    public static final String ID_SYSCOIN_REGTEST = "org.syscoin.regtest";
+    public static final String ID_VIRCLE_TESTNET = "org.vircle.test";
+    public static final String ID_VIRCLE_REGTEST = "org.vircle.regtest";
 
-    public static final int SYSCOIN_TARGET_TIMESPAN = 6 * 60 * 60; // 6h retarget
-    public static final int SYSCOIN_TARGET_SPACING = 1 * 60;  // 1 minute per block.
-    public static final int SYSCOIN_INTERVAL = SYSCOIN_TARGET_TIMESPAN / SYSCOIN_TARGET_SPACING;
+    public static final int VIRCLE_TARGET_TIMESPAN = 6 * 60 * 60; // 6h retarget
+    public static final int VIRCLE_TARGET_SPACING = 1 * 60;  // 1 minute per block.
+    public static final int VIRCLE_INTERVAL = VIRCLE_TARGET_TIMESPAN / VIRCLE_TARGET_SPACING;
     private static final int BLOCK_VERSION_FLAG_AUXPOW = 0x00000100;
-    protected Logger log = LoggerFactory.getLogger(AbstractSyscoinParams.class);
+    protected Logger log = LoggerFactory.getLogger(AbstractVircleParams.class);
 
     private static final Coin BASE_SUBSIDY   = COIN.multiply(500000);
     private static final Coin STABLE_SUBSIDY = COIN.multiply(10000);
     int nBridgeStartBlock;
-    public AbstractSyscoinParams() {
+    public AbstractVircleParams() {
         super();
-        interval = SYSCOIN_INTERVAL;
+        interval = VIRCLE_INTERVAL;
         nBridgeStartBlock = 348000;  // HF activation of sysethereum bridge
-        targetTimespan = SYSCOIN_TARGET_TIMESPAN;
+        targetTimespan = VIRCLE_TARGET_TIMESPAN;
     }
 
     @Override
@@ -182,12 +182,12 @@ public abstract class AbstractSyscoinParams extends NetworkParameters implements
 
 
     public MonetaryFormat getMonetaryFormat() {
-        return SYSCOIN;
+        return VIRCLE;
     }
 
     @Override
     public Coin getMaxMoney() {
-        // TODO: Change to be Syscoin compatible
+        // TODO: Change to be Vircle compatible
         return MAX_MONEY;
     }
 
@@ -198,7 +198,7 @@ public abstract class AbstractSyscoinParams extends NetworkParameters implements
 
     @Override
     public String getUriScheme() {
-        return "syscoin";
+        return "vircle";
     }
 
     @Override

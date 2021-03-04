@@ -8,7 +8,7 @@ package org.bitcoinj.core;
 import org.libdohj.core.AltcoinSerializer;
 import java.io.IOException;
 import java.math.BigInteger;
-import org.libdohj.params.SyscoinMainNetParams;
+import org.libdohj.params.VircleMainNetParams;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -21,8 +21,8 @@ import org.junit.Test;
  *
  * @author jrn
  */
-public class SyscoinBlockTest {
-    private final NetworkParameters params = SyscoinMainNetParams.get();
+public class VircleBlockTest {
+    private final NetworkParameters params = VircleMainNetParams.get();
 
     @Before
     public void setUp() throws Exception {

@@ -19,21 +19,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.syscoin</groupId>
-        <artifactId>syscoinj-parent</artifactId>
+        <groupId>com.vircle</groupId>
+        <artifactId>virclej-parent</artifactId>
         <version>0.15.31-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>syscoinj-examples</artifactId>
+    <artifactId>virclej-examples</artifactId>
 
-    <name>syscoinj Examples</name>
-    <description>A collection of examples using the syscoinj library</description>
+    <name>virclej Examples</name>
+    <description>A collection of examples using the virclej library</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.syscoin</groupId>
-            <artifactId>syscoinj-core</artifactId>
+            <groupId>com.vircle</groupId>
+            <artifactId>virclej-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

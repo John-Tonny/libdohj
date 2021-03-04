@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.AbstractPeerEventListener;
-import com.syscoin.syscoinj.core.NetworkParameters;
-import com.syscoin.syscoinj.core.Peer;
-import com.syscoin.syscoinj.core.PeerAddress;
-import com.syscoin.syscoinj.core.VersionMessage;
-import com.syscoin.syscoinj.net.discovery.DnsDiscovery;
-import com.syscoin.syscoinj.net.discovery.PeerDiscoveryException;
-import com.syscoin.syscoinj.net.NioClientManager;
-import com.syscoin.syscoinj.params.MainNetParams;
-import com.syscoin.syscoinj.utils.BriefLogFormatter;
+import com.vircle.virclej.core.AbstractPeerEventListener;
+import com.vircle.virclej.core.NetworkParameters;
+import com.vircle.virclej.core.Peer;
+import com.vircle.virclej.core.PeerAddress;
+import com.vircle.virclej.core.VersionMessage;
+import com.vircle.virclej.net.discovery.DnsDiscovery;
+import com.vircle.virclej.net.discovery.PeerDiscoveryException;
+import com.vircle.virclej.net.NioClientManager;
+import com.vircle.virclej.params.MainNetParams;
+import com.vircle.virclej.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

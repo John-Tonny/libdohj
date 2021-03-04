@@ -29,10 +29,10 @@ import static com.google.common.base.Preconditions.checkState;
 /**
  * Network parameters for the regression test mode of bitcoind in which all blocks are trivially solvable.
  */
-public class SyscoinRegTestParams extends SyscoinTestNet3Params {
+public class VircleRegTestParams extends VircleTestNet3Params {
     private static final BigInteger MAX_TARGET = new BigInteger("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", 16);
 
-    public SyscoinRegTestParams() {
+    public VircleRegTestParams() {
         super();
         // Difficulty adjustments are disabled for regtest.
         // By setting the block interval for difficulty adjustments to Integer.MAX_VALUE we make sure difficulty never changes.
@@ -40,7 +40,7 @@ public class SyscoinRegTestParams extends SyscoinTestNet3Params {
         maxTarget = MAX_TARGET;
         subsidyDecreaseBlockCount = 150;
         port = 18444;
-        id = ID_SYSCOIN_REGTEST;
+        id = ID_VIRCLE_REGTEST;
         packetMagic = 0xfabfb5da;
         nBridgeStartBlock = 100;
     }
@@ -54,7 +54,7 @@ public class SyscoinRegTestParams extends SyscoinTestNet3Params {
 
     @Override
     public Block getGenesisBlock() {
-        synchronized (SyscoinRegTestParams.class) {
+        synchronized (VircleRegTestParams.class) {
             if (genesis == null) {
                 genesis = super.getGenesisBlock();
                 genesis.setNonce(3);
@@ -69,18 +69,18 @@ public class SyscoinRegTestParams extends SyscoinTestNet3Params {
         }
     }
 
-    private static SyscoinRegTestParams instance;
+    private static VircleRegTestParams instance;
 
-    public static synchronized SyscoinRegTestParams get() {
+    public static synchronized VircleRegTestParams get() {
         if (instance == null) {
-            instance = new SyscoinRegTestParams();
+            instance = new VircleRegTestParams();
         }
         return instance;
     }
 
     @Override
     public String getPaymentProtocolId() {
-        return ID_SYSCOIN_REGTEST;
+        return ID_VIRCLE_REGTEST;
     }
 
     @Override

@@ -22,14 +22,14 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.libdohj.params.SyscoinMainNetParams;
+import org.libdohj.params.VircleMainNetParams;
 
 /**
  *
  * @author jrn
  */
 public class AltcoinBlockTest {
-    private final NetworkParameters params = SyscoinMainNetParams.get();
+    private final NetworkParameters params = VircleMainNetParams.get();
 
     @Before
     public void setUp() throws Exception {

@@ -1,9 +1,9 @@
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.NetworkParameters;
-import com.syscoin.syscoinj.core.Wallet;
-import com.syscoin.syscoinj.params.TestNet3Params;
-import com.syscoin.syscoinj.wallet.DeterministicSeed;
+import com.vircle.virclej.core.NetworkParameters;
+import com.vircle.virclej.core.Wallet;
+import com.vircle.virclej.params.TestNet3Params;
+import com.vircle.virclej.wallet.DeterministicSeed;
 import com.google.common.base.Joiner;
 
 /**

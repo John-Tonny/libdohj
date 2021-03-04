@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.Coin;
-import com.syscoin.syscoinj.core.NetworkParameters;
-import com.syscoin.syscoinj.core.Sha256Hash;
-import com.syscoin.syscoinj.core.VerificationException;
-import com.syscoin.syscoinj.core.WalletExtension;
-import com.syscoin.syscoinj.kits.WalletAppKit;
-import com.syscoin.syscoinj.params.RegTestParams;
-import com.syscoin.syscoinj.protocols.channels.*;
-import com.syscoin.syscoinj.utils.BriefLogFormatter;
+import com.vircle.virclej.core.Coin;
+import com.vircle.virclej.core.NetworkParameters;
+import com.vircle.virclej.core.Sha256Hash;
+import com.vircle.virclej.core.VerificationException;
+import com.vircle.virclej.core.WalletExtension;
+import com.vircle.virclej.kits.WalletAppKit;
+import com.vircle.virclej.params.RegTestParams;
+import com.vircle.virclej.protocols.channels.*;
+import com.vircle.virclej.utils.BriefLogFormatter;
 import com.google.common.collect.ImmutableList;
 
 import com.google.common.util.concurrent.ListenableFuture;

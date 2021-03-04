@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.Wallet;
+import com.vircle.virclej.core.Wallet;
 
 import java.io.File;
 

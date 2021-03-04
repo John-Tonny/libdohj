@@ -29,33 +29,33 @@ import org.bitcoinj.core.Sha256Hash;
 import static com.google.common.base.Preconditions.checkState;
 import java.math.BigInteger;
 /**
- * Parameters for the Syscoin testnet, a separate public network that has
+ * Parameters for the Vircle testnet, a separate public network that has
  * relaxed rules suitable for development and testing of applications and new
- * Syscoin versions.
+ * Vircle versions.
  */
-public class SyscoinTestNet3Params extends AbstractSyscoinParams {
+public class VircleTestNet3Params extends AbstractVircleParams {
     public static final int TESTNET_MAJORITY_WINDOW = 1000;
     public static final int TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED = 750;
     public static final int TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 501;
 
-    public SyscoinTestNet3Params() {
+    public VircleTestNet3Params() {
         super();
-        id = ID_SYSCOIN_TESTNET;
+        id = ID_VIRCLE_TESTNET;
 
-        packetMagic = 0x1a2b3c4d;
+        packetMagic = 0xaeafacad;
         maxTarget = Utils.decodeCompactBits(0x1e0fffffL);
-        port = 9903;
+        port = 9804;
         addressHeader = 65;
         p2shHeader = 196;
         dumpedPrivateKeyHeader = 239;
         segwitAddressHrp = "tvcl";
-        genesisBlock.setTime(1576000000L);
+        genesisBlock.setTime(1611028800L);
         genesisBlock.setDifficultyTarget(0x1e0fffffL);
-        genesisBlock.setNonce(18504L);
+        genesisBlock.setNonce(4632189L);
         spendableCoinbaseDepth = 100;
         subsidyDecreaseBlockCount = 210000;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("000007444b1d43ea313f1eb22b38eecc1bea34bb068728e4a220913247d7f8e2"));
+        checkState(genesisHash.equals("000002b121d6248a8bb31e4e61530e60161992dc8f2547da9275debfe6752a6c"));
 
         majorityEnforceBlockUpgrade = TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
         majorityRejectBlockOutdated = TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED;
@@ -74,10 +74,10 @@ public class SyscoinTestNet3Params extends AbstractSyscoinParams {
         nBridgeStartBlock = 1000;
     }
 
-    private static SyscoinTestNet3Params instance;
-    public static synchronized SyscoinTestNet3Params get() {
+    private static VircleTestNet3Params instance;
+    public static synchronized VircleTestNet3Params get() {
         if (instance == null) {
-            instance = new SyscoinTestNet3Params();
+            instance = new VircleTestNet3Params();
         }
         return instance;
     }
@@ -94,7 +94,7 @@ public class SyscoinTestNet3Params extends AbstractSyscoinParams {
             final long timeDelta = nextBlock.getTimeSeconds() - prev.getTimeSeconds();
             // There is an integer underflow bug in bitcoin-qt that means mindiff blocks are accepted when time
             // goes backwards.
-            if (timeDelta >= 0 && timeDelta <= SYSCOIN_TARGET_SPACING * 20) {
+            if (timeDelta >= 0 && timeDelta <= VIRCLE_TARGET_SPACING * 20) {
                 // Walk backwards until we find a block that doesn't have the easiest proof of work, then check
                 // that difficulty is equal to that one.
                 StoredBlock cursor = storedPrev;

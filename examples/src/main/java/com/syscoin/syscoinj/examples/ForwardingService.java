@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.*;
-import com.syscoin.syscoinj.crypto.KeyCrypterException;
-import com.syscoin.syscoinj.kits.WalletAppKit;
-import com.syscoin.syscoinj.params.MainNetParams;
-import com.syscoin.syscoinj.params.RegTestParams;
-import com.syscoin.syscoinj.params.TestNet3Params;
-import com.syscoin.syscoinj.utils.BriefLogFormatter;
+import com.vircle.virclej.core.*;
+import com.vircle.virclej.crypto.KeyCrypterException;
+import com.vircle.virclej.kits.WalletAppKit;
+import com.vircle.virclej.params.MainNetParams;
+import com.vircle.virclej.params.RegTestParams;
+import com.vircle.virclej.params.TestNet3Params;
+import com.vircle.virclej.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -81,7 +81,7 @@ public class ForwardingService {
         kit.wallet().addEventListener(new AbstractWalletEventListener() {
             @Override
             public void onCoinsReceived(Wallet w, Transaction tx, Coin prevBalance, Coin newBalance) {
-                // Runs in the dedicated "user thread" (see syscoinj docs for more info on this).
+                // Runs in the dedicated "user thread" (see virclej docs for more info on this).
                 //
                 // The transaction "tx" can either be pending, or included into a block (we didn't see the broadcast).
                 Coin value = tx.getValueSentToMe(w);

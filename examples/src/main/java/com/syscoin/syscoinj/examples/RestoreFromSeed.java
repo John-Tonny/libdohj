@@ -1,10 +1,10 @@
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.*;
-import com.syscoin.syscoinj.net.discovery.DnsDiscovery;
-import com.syscoin.syscoinj.params.TestNet3Params;
-import com.syscoin.syscoinj.store.SPVBlockStore;
-import com.syscoin.syscoinj.wallet.DeterministicSeed;
+import com.vircle.virclej.core.*;
+import com.vircle.virclej.net.discovery.DnsDiscovery;
+import com.vircle.virclej.params.TestNet3Params;
+import com.vircle.virclej.store.SPVBlockStore;
+import com.vircle.virclej.wallet.DeterministicSeed;
 
 import java.io.File;
 
@@ -31,7 +31,7 @@ public class RestoreFromSeed {
         Wallet wallet = Wallet.fromSeed(params, seed);
 
         // Because we are importing an existing wallet which might already have transactions we must re-download the blockchain to make the wallet picks up these transactions
-        // You can find some information about this in the guides: https://syscoinj.github.io/working-with-the-wallet#setup
+        // You can find some information about this in the guides: https://virclej.github.io/working-with-the-wallet#setup
         // To do this we clear the transactions of the wallet and delete a possible existing blockchain file before we download the blockchain again further down.
         System.out.println(wallet.toString());
         wallet.clearTransactions(0);

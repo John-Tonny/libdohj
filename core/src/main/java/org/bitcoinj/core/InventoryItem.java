@@ -31,7 +31,7 @@ public class InventoryItem {
         // BIP37 extension:
         FILTERED_BLOCK(0x3),
         CMPCT_BLOCK(0x4),     //!< Defined in BIP152
-        // Syscoin message types
+        // Vircle message types
         SPORK(0x6),
         MASTERNODE_PAYMENT_VOTE(0x7),
         MASTERNODE_PAYMENT_BLOCK(0x8),

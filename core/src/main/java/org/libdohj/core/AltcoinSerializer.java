@@ -57,7 +57,7 @@ public class AltcoinSerializer extends BitcoinSerializer {
         names.put(GetUTXOsMessage.class, "getutxos");
         names.put(UTXOsMessage.class, "utxos");
         names.put(SendHeadersMessage.class, "sendheaders");
-        // SYSCOIN specific
+        // VIRCLE specific
         names.put(MasternodeBroadcast.class, "mnb");
         names.put(MasternodePing.class, "mnp");
         names.put(MasternodePing.class, "dseg");

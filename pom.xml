@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.libdohj</groupId>
     <artifactId>libdohj-parent</artifactId>
-    <version>0.15.32</version>
+    <version>0.15.33</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -12,9 +12,9 @@
 
 
     <scm>
-        <connection>scm:git:https://github.com/syscoin/libdohj</connection>
-        <developerConnection>scm:git:https://github.com/syscoin/libdohj</developerConnection>
-        <url>scm:git:https://github.com/syscoin/libdohj</url>
+        <connection>scm:git:https://github.com/vircle/libdohj</connection>
+        <developerConnection>scm:git:https://github.com/vircle/libdohj</developerConnection>
+        <url>scm:git:https://github.com/vircle/libdohj</url>
     </scm>
 
     <name>libdohj Parent</name>
@@ -38,7 +38,7 @@
     </distributionManagement>
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/syscoin/libdohj/issues</url>
+        <url>https://github.com/vircle/libdohj/issues</url>
     </issueManagement>
 
     <!-- Common build plugin configuration -->
@@ -55,7 +55,7 @@
                     <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
                     <includes><include>**/*</include></includes>
                     <repositoryName>libdohj</repositoryName>      <!-- github repo name -->
-                    <repositoryOwner>syscoin</repositoryOwner>    <!-- github username  -->
+                    <repositoryOwner>vircle</repositoryOwner>    <!-- github username  -->
                 </configuration>
                 <executions>
                     <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->

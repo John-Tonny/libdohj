@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.*;
-import com.syscoin.syscoinj.params.TestNet3Params;
-import com.syscoin.syscoinj.store.BlockStore;
-import com.syscoin.syscoinj.store.MemoryBlockStore;
-import com.syscoin.syscoinj.utils.BriefLogFormatter;
+import com.vircle.virclej.core.*;
+import com.vircle.virclej.params.TestNet3Params;
+import com.vircle.virclej.store.BlockStore;
+import com.vircle.virclej.store.MemoryBlockStore;
+import com.vircle.virclej.utils.BriefLogFormatter;
 
 import java.net.InetAddress;
 import java.util.concurrent.Future;

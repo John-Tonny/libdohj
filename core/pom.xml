@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.libdohj</groupId>
     <artifactId>libdohj-core</artifactId>
-    <version>0.15.32-R</version>
+    <version>0.15.33-R</version>
     <packaging>jar</packaging>
 
     <licenses>
@@ -24,7 +24,7 @@
     <developers>
         <developer>
             <name>The libdohj team.</name>
-            <email>help@syscoin.org</email>
+            <email>help@vircle.org</email>
         </developer>
     </developers>
     <profiles>

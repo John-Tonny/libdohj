@@ -25,8 +25,8 @@ import org.junit.Before;
  *
  * @author Ross Nicoll
  */
-public class AbstractSyscoinParamsTest {
-    private static final AbstractSyscoinParams params = SyscoinMainNetParams.get();
+public class AbstractVircleParamsTest {
+    private static final AbstractVircleParams params = VircleMainNetParams.get();
 
     @Before
     public void setUp() throws Exception {

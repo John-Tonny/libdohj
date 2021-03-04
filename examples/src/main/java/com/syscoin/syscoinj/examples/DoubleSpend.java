@@ -1,14 +1,14 @@
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.*;
-import com.syscoin.syscoinj.kits.WalletAppKit;
-import com.syscoin.syscoinj.params.RegTestParams;
-import com.syscoin.syscoinj.utils.BriefLogFormatter;
-import com.syscoin.syscoinj.utils.Threading;
+import com.vircle.virclej.core.*;
+import com.vircle.virclej.kits.WalletAppKit;
+import com.vircle.virclej.params.RegTestParams;
+import com.vircle.virclej.utils.BriefLogFormatter;
+import com.vircle.virclej.utils.Threading;
 
 import java.io.File;
 
-import static com.syscoin.syscoinj.core.Coin.*;
+import static com.vircle.virclej.core.Coin.*;
 
 /**
  * This is a little test app that waits for a coin on a local regtest node, then  generates two transactions that double

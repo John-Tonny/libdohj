@@ -1,4 +1,4 @@
-# configuration for https://travis-ci.org/syscoin/libdohj
+# configuration for https://travis-ci.org/vircle/libdohj
 sudo: false
 language: java
 jdk: oraclejdk8

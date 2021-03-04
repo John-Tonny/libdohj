@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.AbstractPeerEventListener;
-import com.syscoin.syscoinj.core.NetworkParameters;
-import com.syscoin.syscoinj.core.Peer;
-import com.syscoin.syscoinj.core.PeerGroup;
-import com.syscoin.syscoinj.net.discovery.DnsDiscovery;
-import com.syscoin.syscoinj.params.MainNetParams;
-import com.syscoin.syscoinj.utils.BriefLogFormatter;
+import com.vircle.virclej.core.AbstractPeerEventListener;
+import com.vircle.virclej.core.NetworkParameters;
+import com.vircle.virclej.core.Peer;
+import com.vircle.virclej.core.PeerGroup;
+import com.vircle.virclej.net.discovery.DnsDiscovery;
+import com.vircle.virclej.params.MainNetParams;
+import com.vircle.virclej.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

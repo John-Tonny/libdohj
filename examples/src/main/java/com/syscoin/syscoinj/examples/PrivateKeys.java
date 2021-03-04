@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package com.syscoin.syscoinj.examples;
+package com.vircle.virclej.examples;
 
-import com.syscoin.syscoinj.core.*;
-import com.syscoin.syscoinj.params.MainNetParams;
-import com.syscoin.syscoinj.store.MemoryBlockStore;
+import com.vircle.virclej.core.*;
+import com.vircle.virclej.params.MainNetParams;
+import com.vircle.virclej.store.MemoryBlockStore;
 
 import java.math.BigInteger;
 import java.net.InetAddress;

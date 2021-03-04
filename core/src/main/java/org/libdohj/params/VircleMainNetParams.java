@@ -22,15 +22,15 @@ import org.bitcoinj.core.Utils;
 import static com.google.common.base.Preconditions.checkState;
 import java.math.BigInteger;
 /**
- * Parameters for the main Syscoin production network on which people trade
+ * Parameters for the main Vircle production network on which people trade
  * goods and services.
  */
-public class SyscoinMainNetParams extends AbstractSyscoinParams {
+public class VircleMainNetParams extends AbstractVircleParams {
     public static final int MAINNET_MAJORITY_WINDOW = 2000;
     public static final int MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED = 1900;
     public static final int MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 1500;
 
-    public SyscoinMainNetParams() {
+    public VircleMainNetParams() {
         super();
         maxTarget = Utils.decodeCompactBits(0x1e0fffffL);
 
@@ -39,25 +39,25 @@ public class SyscoinMainNetParams extends AbstractSyscoinParams {
         addressHeader = 63;
         p2shHeader = 5;
 
-        port = 9900;
-        packetMagic = 0x9a0b9c0d;
+        port = 9804;
+        packetMagic = 0xaeafacad;
 
 
-        segwitAddressHrp = "sys";
+        segwitAddressHrp = "ail";
         bip32HeaderP2PKHpub = 0x0488b21e; // The 4 byte header that serializes in base58 to "xpub".
         bip32HeaderP2PKHpriv = 0x0488ade4; // The 4 byte header that serializes in base58 to "xprv"
         bip32HeaderP2WPKHpub = 0x04b24746; // The 4 byte header that serializes in base58 to "zpub".
         bip32HeaderP2WPKHpriv = 0x04b2430c; // The 4 byte header that serializes in base58 to "zprv"
 
         genesisBlock.setDifficultyTarget(0x1e0fffffL);
-        genesisBlock.setTime(1589846400L);
-        genesisBlock.setNonce(2655493L);
-        id = ID_SYSCOIN_MAINNET;
+        genesisBlock.setTime(1611028800L);
+        genesisBlock.setNonce(4632189L);
+        id = ID_VIRCLE_MAINNET;
         subsidyDecreaseBlockCount = 100000;
         spendableCoinbaseDepth = 100;
 
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("0000049286f4c4a14dea206d39f6ff3275824bed0b06c9c4dc7acdb7e4bbad05"),
+        checkState(genesisHash.equals("000002b121d6248a8bb31e4e61530e60161992dc8f2547da9275debfe6752a6c"),
                 genesisHash);
 
         majorityEnforceBlockUpgrade = MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
@@ -68,23 +68,20 @@ public class SyscoinMainNetParams extends AbstractSyscoinParams {
         // transactions are handled. Duplicated transactions could occur in the case where a coinbase had the same
         // extraNonce and the same outputs but appeared at different heights, and greatly complicated re-org handling.
         // Having these here simplifies block connection logic considerably.
-        checkpoints.put(    0, Sha256Hash.wrap("0000049286f4c4a14dea206d39f6ff3275824bed0b06c9c4dc7acdb7e4bbad05"));
-        checkpoints.put(    250, Sha256Hash.wrap("00000fb53813979ed8ddbc22bf6476021bb7213b471766f26f548c594b8cf83e"));
-        checkpoints.put(    5000, Sha256Hash.wrap("0000000d936bd198f5bceb71136b230a823a4c4d18712eb81bd7c68aff64bd41"));
-        checkpoints.put(    10000, Sha256Hash.wrap("0000000166523b6d6bb950e3b184746030f90c8b6bed718c9770ccc89fe3056b"));
-        checkpoints.put(    20000, Sha256Hash.wrap("00000004c4abab46915efe25cdc704e5318cdeeffdfa2832b06d608cdf2f08b2"));
+        checkpoints.put(    0, Sha256Hash.wrap("000002b121d6248a8bb31e4e61530e60161992dc8f2547da9275debfe6752a6c"));
+        checkpoints.put(    250, Sha256Hash.wrap("00000338d572ca186190f57bd328d4a956def50bf78395b1402b6899854539df"));
+        checkpoints.put(    5000, Sha256Hash.wrap("0000000001c8f47f5bb91b27637de6f94567d48ff31e2d17682ccb605d5eca78"));
 
         dnsSeeds = new String[] {
-                "52.83.40.78",
-                "52.82.4.7",
-                "52.83.45.206"
+                "47.111.243.38",
+                "68.79.34.218"
         };
     }
 
-    private static SyscoinMainNetParams instance;
-    public static synchronized SyscoinMainNetParams get() {
+    private static VircleMainNetParams instance;
+    public static synchronized VircleMainNetParams get() {
         if (instance == null) {
-            instance = new SyscoinMainNetParams();
+            instance = new VircleMainNetParams();
         }
         return instance;
     }
@@ -93,7 +90,7 @@ public class SyscoinMainNetParams extends AbstractSyscoinParams {
     @Override
     public String getPaymentProtocolId() {
         // TODO: CHANGE THIS
-        return ID_SYSCOIN_MAINNET;
+        return ID_VIRCLE_MAINNET;
     }
 
     @Override
